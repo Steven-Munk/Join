@@ -1,0 +1,84 @@
+* {
+  font-family: "Inter";
+}
+
+body {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #f5f5f5;
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 61px;
+  margin-block: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+  margin-left: 270px;
+}
+
+.container > div {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 35px;
+}
+
+p {
+  max-width: 70vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container > div > p > a {
+  height: unset;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: unset;
+  text-decoration: none;
+  margin-inline: 5px;
+  color: #29abe2;
+  width: unset;
+}
+
+.container > div > p > a:hover {
+  background-color: unset;
+}
+
+#source {
+  text-decoration: none;
+  color: black;
+}
+
+#source:hover {
+  background-color: unset;
+  text-decoration: underline;
+}
+
+.section-number {
+  font-weight: 700;
+  font-size: 27px;
+
+  width: 32px;
+
+  margin-right: 35px;
+}
+
+@media only screen and (max-width: 1080px) {
+  .container {
+    margin-inline: 10px;
+    margin-bottom: 90px;
+  }
+
+  p {
+    max-width: 99%;
+  }
+}

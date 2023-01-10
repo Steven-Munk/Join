@@ -1,0 +1,301 @@
+/****************************OUTSEIDE OF CARD*************************/
+
+body {
+    margin: 0px;
+    font-family: 'Inter';
+    font-style: normal;
+    background-color: #F5F5F5;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(2);
+    transition: 500ms ease-in-out;    
+}
+
+.logo-after {
+    position: absolute;
+    top: 80px;
+    left: 77px;
+    transform: scale(1);
+    cursor: pointer;
+}
+
+.sign-up-container {
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    top: 67px;
+    right: 114px;
+
+    transition: ease-in-out 500ms;
+}
+
+.sign-btn {
+    font-size: 16px !important;
+    width: 91px !important;
+    height: 51px !important;
+    margin-left: 35px;
+}
+
+.dark-btn {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+
+    width: 145px;
+    height: 51px;
+
+    color: #FFFFFF;
+    background-color: #2A3647;
+
+    border-radius: 8px;
+    border: none;
+
+    cursor: pointer;
+}
+
+.dark-btn:hover {
+    background-color: #29ABE2;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+.bright-btn {
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 120%;
+    width: 161px;
+    height: 51px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #2A3647;
+    background-color: #FFFFFF;
+
+    border-radius: 8px;
+    border: 1px solid #2A3647;
+
+    cursor: pointer;
+}
+
+.blue-arrow {
+    position: absolute;
+    top: 35px;
+    left: 31px;
+    cursor: pointer;
+}
+
+.bright-btn:hover {
+    color: #29ABE2;
+    border: 1px solid #29ABE2;
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 652px;
+    height: 513px;
+    gap: 35px;
+
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+    border-radius: 30px;
+
+    transition: ease-in-out 500ms; 
+}
+
+.text {
+    font-size: 21px;
+    line-height: 120%;
+    text-align: center;
+    margin: 0px;
+}
+
+.opacity-zero {
+    opacity: 0 !important;
+}
+
+/****************************OUTSIDE OF CARD*************************/
+
+/****************************LOGIN SECTION*************************/
+
+h1 {
+    font-weight: 700;
+    font-size: 61px;
+
+    line-height: 120%;
+    margin: 0px;
+    height: 64px;
+}
+
+.underline {
+    width: 150px;
+    border-top: 3px solid #29ABE2;
+    border-radius: 3px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.all-inputfields {
+    display: flex;
+    flex-direction: column;
+    gap: 49px;
+}
+
+.inputfield {
+    box-sizing: border-box;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 13px 21px;
+
+    width: 422px;
+    height: 51px;
+
+    border: 1px solid #D1D1D1;
+    border-radius: 10px;
+}
+
+.input {
+    width: 335px;
+    height: 45px;
+    border: none;
+
+    font-family: 'Inter';
+    font-size: 21px;
+
+}
+
+.input:focus {
+    outline: none;
+}
+
+.input::placeholder {
+    font-size: 21px;
+    color: #D1D1D1;
+}
+
+.wrong-input {
+    position: absolute;
+    top: 55px;
+    left: 0px;
+    color: red;
+    font-size: 13px;
+}
+
+.memorie-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 35px;
+}
+
+.remember-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.remember-checkbox {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.forgot-password {
+    color: #29ABE2;
+    text-decoration: none;
+}
+
+.login-button-container {
+    display: flex;
+    gap: 35px;
+}
+
+/****************************LOGIN SECTION*************************/
+
+/****************************SIGN UP SECTION*************************/
+
+.sign-up-card {
+    height: 559px;
+    position: relative;
+}
+
+/****************************SIGN UP SECTION*************************/
+
+/****************************FORGOT SECTION*************************/
+
+.forgot-card {
+    position: relative;
+    width: 826px;
+    height: 462px;
+}
+
+.mail-continue-btn {
+    width: 264px;
+    margin-top: 20px;
+}
+
+/****************************FORGOT SECTION*************************/
+
+/****************************RESET SECTION*************************/
+
+.reset-card {
+    position: relative;
+    width: 826px;
+    height: 537px;
+}
+
+/****************************RESET SECTION*************************/
+
+/********************************************************************/
+
+.success-btn {
+    font-weight: 400;
+    font-size: 23px;
+
+    width: 326px;
+    height: 74px;
+
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    border: none;
+}
+
+.mail-sent-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+    font-weight: 400;
+    font-size: 23px;
+
+    width: 424px;
+    height: 74px;
+
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    border: none;
+}

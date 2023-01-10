@@ -1,0 +1,72 @@
+{
+    "epics": [
+        {
+            "name": "backoffice",
+            "color": "yellow",
+            "tasks": [
+                {
+                    "id": "4",
+                    "name": "accounting invoice",
+                    "description": "check-invoice",
+                    "subtasks": [
+                        "null"
+                    ],
+                    "contacts": [
+                        "Peter",
+                        "Fritz"
+                    ],
+                    "priority": "low",
+                    "category": "todo"
+                },
+                {
+                    "id": "3",
+                    "name": "accounting something",
+                    "description": "check-something",
+                    "subtasks": [
+                        "check one",
+                        "check the other"
+                    ],
+                    "contacts": [
+                        "Peter"
+                    ],
+                    "priority": "medium",
+                    "category": "todo"
+                }
+            ]
+        },
+        {
+            "name": "sales",
+            "color": "pink",
+            "tasks": [
+                {
+                    "id": "1",
+                    "name": "more sales",
+                    "description": "check how to get more sales on colors",
+                    "subtasks": [
+                        "null"
+                    ],
+                    "contacts": [
+                        "Peter",
+                        "Fritz"
+                    ],
+                    "priority": "urgent",
+                    "category": "done"
+                },
+                {
+                    "id": "2",
+                    "name": "write recipe",
+                    "description": "write recipes in new database",
+                    "subtasks": [
+                        "check one",
+                        "check the other"
+                    ],
+                    "contacts": [
+                        "Peter"
+                    ],
+                    "priority": "medium",
+                    "category": "todo"
+                }
+            ]
+        }
+    ]
+}

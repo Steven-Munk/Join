@@ -1,0 +1,114 @@
+@media (max-width: 1080px) {
+
+    body {
+        margin: 0px;
+        margin-top: 80px;
+    }
+
+    .greeting {
+        display: none;
+    }
+
+    .only-mobile {
+        display: block;
+        font-size: 16px;
+    }
+
+    .only-desktop {
+        display: none;
+    }
+
+    .container {
+        width: auto;
+    }
+
+    .title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .kanban {
+        font-size: 16px;
+        margin: 0px;
+        line-height: 120%;
+    }
+
+    h1 {
+        font-size: 47px;
+        margin: 0px;
+    }
+
+    .title-p {
+        font-size: 21px;
+        margin: 0px;
+    }
+
+    .title :last-child {
+        margin-block: 10px;
+    }
+
+    .content {
+        gap: 0px;
+        margin-bottom: 60px;
+    }
+
+    .overview {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .overview-card {
+        height: 110px;
+    }
+
+    .top-row {
+        gap: 15px;
+    }
+
+    .top-row-card {
+        width: 110px;
+    }
+
+    .card-number {
+        font-size: 47px;
+    }
+
+    .card-text {
+        font-size: 14px;
+    }
+
+    .mid-row-card {
+        height: 110px;
+        width: 360px;
+        gap: 20px;
+    }
+
+    .img-scale {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mid-card-text {
+        font-size: 14px;
+    }
+
+    .gray-line {
+        padding: 0px;
+    }
+
+    .date {
+        font-size: 16px;
+    }
+
+    .bottom-row {
+        gap: 15px;
+    }
+
+    .bottom-row-card {
+        width: 172.5px;
+        height: 110px;
+        gap: 10px;
+    }
+
+}

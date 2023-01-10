@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/sideBar.css">
+    <link rel="stylesheet" href="./style/fonts.css">
+    <script src="./script/mini_backend.js"></script>
+    <script src="./script/templates.js"></script>
+    <link rel="stylesheet" href="./style/legalNotice.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>help</title>
+</head>
+
+<body onload="includeHTML()">
+    <div w3-include-html="./templates/sideBar.html"></div>
+    <div class="container">
+        <h1>Help</h1>
+        <h2>What is Join?</h2>
+        <p>Join is a simple application for you and your teammembers to access a Kanban.
+            To make use of a Kanban in the most effective manner we recommend you to do your own research as well.
+            But below we give you an insight into the functions.
+        </p>
+
+        <h2>How to use it</h2>
+
+        <div><span class="section-number">1.</span><p>Go to  <a href="contacts.html">"Contacts"</a> and add your team members.</p> </div>
+        <div><span class="section-number">2.</span><p>Go to <a href="addTask.html">"Add Task"</a> and create as many Tasks as you like. Creating a Task is straight forward.</p> </div>
+        <div><span class="section-number">3.</span><p>Go to the<a href="board.html">"Board"</a> here you can find all your created Tasks. </p> </div>
+     
+            <div><span class="section-number">3.1</span><p>If you are working on a Task you should drag it to "progress" to let your team members know.</p> </div>
+            <div><span class="section-number">3.2</span><p>If your task is complete, drag it to "Feedback" so that another team member or someone selected by your group can review your work. </p> </div>
+            <div><span class="section-number">3.3</span><p> If everything is accepted by the reviewer he will drag it to "done", otherwise you have to work on it again and start the progress again.</p> </div>
+    </div>
+</body>
+
+</html>
