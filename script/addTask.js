@@ -28,7 +28,7 @@ async function init() {
 /**
  * Backend Functions
 */
-setURL('https://gruppe-354.developerakademie.net/smallest_backend_ever');
+setURL('https://steven-munk.developerakademie.net/smallest_backend_ever');
 
 async function loadData() {
     await downloadFromServer();
