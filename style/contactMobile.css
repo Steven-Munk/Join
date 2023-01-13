@@ -1,9 +1,9 @@
 .only-desktop {
-    display: flex;
+    display: flex !important;
 }
 
 .only-mobile {
-    display: none;
+    display: none !important;
 }
 
 
@@ -11,11 +11,11 @@
 @media (max-width: 1080px) {
 
     .only-desktop {
-        display: none;
+        display: none !important;
     }
 
     .only-mobile {
-        display: block;
+        display: block !important;
     }
 
     body {
@@ -237,5 +237,17 @@
 
     .contact-info {
         padding-bottom: 15px;
+    }
+
+    .forms {
+      margin-bottom: 0px !important;
+    }
+
+    nav {
+        z-index: 0 !important;
+    }
+
+    #close {
+        display: block !important;
     }
 }

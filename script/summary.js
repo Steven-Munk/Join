@@ -1,8 +1,11 @@
-setURL('https://steven-munk.developerakademie.net/smallest_backend_ever');
+setURL('https://gruppe-354.developerakademie.net/smallest_backend_ever');
 
 let users = [];
 let email;
 let username;
+
+let today = new Date()
+let curHr = today.getHours()
 
 
 /**
@@ -62,18 +65,62 @@ function userHasMobileDevice() {
  * function renders the mobile greeting screen and transitions to summary afterwards
  */
 function renderMobileGreeting() {
-    document.getElementById('mobile-greeting').style.display = "block";
-    document.getElementById('body').classList.add("mobile-good-morning-body");
-    document.getElementById('mobileGreeting-title').style = "font-size: 36px;";
-    document.getElementById('name-mobile').style = "font-size: 47px;";
+    loadMobileGreetingCSS();
+    getDaytimeGreeting('mobileGreeting-title');
     renderName();
     localStorage.setItem('Go to summary from LogIn', false);
     setTimeout(renderSummary, 2000);
 }
 
 
+/**
+ * function loads css to greeting container, so it looks good in mobile view
+ */
+function loadMobileGreetingCSS() {
+    document.getElementById('mobile-greeting').style.display = "block";
+    document.getElementById('body').classList.add("mobile-good-morning-body");
+    document.getElementById('mobileGreeting-title').style = "font-size: 36px;";
+    document.getElementById('name-mobile').style = "font-size: 47px;";
+}
+
+
+/**
+ * function gets the right greeting for the right daytime
+ * @param {id of greeting} greetingH2 
+ */
+function getDaytimeGreeting(greetingH2) {
+    if (curHr < 12) {
+        document.getElementById(greetingH2).innerHTML='Good morning';
+      } else if (curHr < 18) {
+        document.getElementById(greetingH2).innerHTML='Good afternoon';
+      } else {
+        document.getElementById(greetingH2).innerHTML='Good evening';
+      }
+}
+
+
+/**
+ * function renders username 
+ */
+function renderName() {
+    if (username == 'Guest') {
+        getDaytimeGreeting('mobileGreeting-title');
+        getDaytimeGreeting('greeting-title');
+    } else {
+        document.getElementById('mobileGreeting-title').innerHTML+=',';
+        document.getElementById('greeting-title').innerHTML+=',';
+        document.getElementById('name-desktop').innerHTML = username;
+        document.getElementById('name-mobile').innerHTML = username;
+    }
+}
+
+
+/**
+ * function renders the greeting for desktop view
+ */
 function renderDesktopGreeting() {
     document.getElementById('container').style.display = "block";
+    getDaytimeGreeting('greeting-title');
     renderName();
     localStorage.setItem('Go to summary from LogIn', false);
 }
@@ -87,20 +134,6 @@ function renderSummary() {
     document.getElementById('mobile-greeting').style.display = "none";
     document.getElementById('greeting').style.display = "none";
     document.getElementById('container').style.display = "block";
-}
-
-
-/**
- * function renders username 
- */
-function renderName() {
-    if (username == 'Guest') {
-        document.getElementById('greeting-title').innerHTML = 'Good morning';
-        document.getElementById('mobileGreeting-title').innerHTML = 'Good morning';
-    } else {
-        document.getElementById('name-desktop').innerHTML = username;
-        document.getElementById('name-mobile').innerHTML = username;
-    }
 }
 
 

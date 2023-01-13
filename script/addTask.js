@@ -23,12 +23,13 @@ async function init() {
     renderContactSelector();
     colorPicker('ocean'); //set default color
     setDateOfToday();
+    document.getElementById('fullscreen').style.display = 'block';
 }
 
 /**
  * Backend Functions
 */
-setURL('https://steven-munk.developerakademie.net/smallest_backend_ever');
+setURL('https://gruppe-354.developerakademie.net/smallest_backend_ever');
 
 async function loadData() {
     await downloadFromServer();

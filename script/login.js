@@ -1,4 +1,4 @@
-setURL('https://steven-munk.developerakademie.net/smallest_backend_ever');
+setURL('https://gruppe-354.developerakademie.net/smallest_backend_ever');
 
 let users = [];
 let username;
@@ -363,9 +363,22 @@ function goToSummary() {
  * after incorrect email and password the entrance to join will be denied and the inputs will be cleared
  */
 function userDoesntGetLoggedIn() {
+    checkLoginFault();
     clearAllInput();
-    wrongPassword();
     document.getElementById('remember-me').checked = false;
+}
+
+
+/**
+ * function checks if just the password is wrong, if the email also doesnt exist
+ */
+function checkLoginFault() {
+    if (emailAlreadyExists()) {
+        wrongPassword();
+    } else {
+        wrongEmail();
+        wrongPassword();
+    }
 }
 
 

@@ -22,7 +22,10 @@
 
 <body onload="includeHTML(), init()">
     <div w3-include-html="./templates/sideBar.html"></div>
-    <div class="container">
+
+    <div class="only-mobile" id="addTaskTemplate" w3-include-html="./templates/addTaskTemplate.html"></div>
+
+    <div class="container only-desktop">
         <h1>Add Task</h1>
         <div class="forms">
             <div class="form">

@@ -189,6 +189,10 @@ div:has(> a.legalNotes) {
         display: block;
     }
 
+    .log-out {
+        right: 24px;
+    }
+
     .legal-notice {
         display: none;
     }

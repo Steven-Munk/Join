@@ -1,4 +1,4 @@
-setURL('https://steven-munk.developerakademie.net/smallest_backend_ever');
+setURL('https://gruppe-354.developerakademie.net/smallest_backend_ever');
 
 // let users = [];
 // let colors = ['neon-orange', 'orange', 'yellow', 'blue', 'dark-red', 'green', 'neon-green', 'pink', 'ocean', 'purple', 'red'];
@@ -284,10 +284,10 @@ async function createNewContact() {
     let email = document.getElementById('newEmail').value;
     let phone = document.getElementById('newPhone').value;
     let color = colors[Math.floor(Math.random() * 8)];
-
     contacts.push({ 'name': name, 'email': email, 'phone': phone, 'color': color })
     await backend.setItem('users', JSON.stringify(users));
-    window.location.href = `contacts.html?msg=Du hast ${name} in deinen Kontakten gespeichet`
+    addChangesToList(name);
+    closeNewContact();
 }
 
 
@@ -310,9 +310,12 @@ function animateNewContact() {
 
 
 /**
- * function closes new contact pop up
+ * valueion closes new contact pop up
  */
 function closeNewContact() {
+    document.getElementById('newName').value = '';
+    document.getElementById('newEmail').value = '';
+    document.getElementById('newPhone').value = '';
     document.getElementById('pop-up-container').classList.add('d-none');
     document.getElementById('pop-up-window').classList.remove('not-hidden');
     document.getElementById('pop-up-window').classList.remove('not-hidden-mobile');
@@ -393,7 +396,7 @@ function renderEditHTML() {
     
             <div class="pop-up-inputfield">
                 <input id="editName" class="pop-up-input" type="text" placeholder="Name" title="Change name">
-                <img src="./assets/profile.svg">
+                <img src="./assets/profile-input.svg">
             </div>
     
             <div class="pop-up-inputfield">
@@ -436,9 +439,10 @@ async function saveContactChanges() {
     oldContact['name'] = document.getElementById('editName').value;
     oldContact['email'] = document.getElementById('editEmail').value;
     oldContact['phone'] = document.getElementById('editPhone').value;
-
+    let name = oldContact['name'];
     await backend.setItem('users', JSON.stringify(users));
-    window.location.href = `contacts.html?msg=Du hast deinen Kontakt erfolgreich geändert!`
+    addChangesToList(name);
+    closeEdit();
 }
 
 
@@ -448,6 +452,20 @@ async function saveContactChanges() {
 function closeEdit() {
     document.getElementById('pop-up-edit').classList.add('d-none');
     document.getElementById('pop-up-edit-window').classList.remove('not-hidden');
+}
+
+
+/**
+ * function renders recent changes to contact page 
+ */
+function addChangesToList(name) {
+    document.getElementById('list').innerHTML = '';
+    allNames = [];
+    allFirstLetters = [];
+    allLettersOnce = [];
+    renderList();
+    document.getElementById('selected-contact').innerHTML = '';
+    showContactEntrie(name);
 }
 
 
@@ -463,33 +481,4 @@ function closeEdit() {
  */
 function openTaskTemplate() {
     document.getElementById('fullscreen').style.display = 'block';
-    if (screen.width < 1080) {
-        openMobileTemplate();
-    } else {
-        openDesktopTemplate();
-    }
-}
-
-
-/**
- * function adjusts settings for mobile template
- */
-function openMobileTemplate() {
-    document.getElementById('forms').style = 'margin-top:170px;';
-    document.getElementById('createTask').innerHTML = `
-    <p style="font-weight: 700;">Create</p>
-    <img src="./assets/createTask.svg">
-    `;
-}
-
-
-/**
- * function adjusts settings for desktop template
- */
-function openDesktopTemplate() {
-    document.getElementById('forms').style = 'margin-top:0px;';
-    document.getElementById('createTask').innerHTML = `
-    create task
-    <img src="./assets/createTask.svg">
-    `;
 }

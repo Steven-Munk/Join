@@ -11,7 +11,7 @@
 
         <!-- oberhalb alles von steven für responsive hinzugefügt -->
 
-        <img onclick="closeAddTaskTemplate()" id="close" src="./assets/close.svg" alt="">
+        <img style="display: none;" onclick="closeAddTaskTemplate()" id="close" src="./assets/close.svg" alt="">
 
         <h1 id="headline">Add Task</h1>
         <div id="forms" class="forms">
@@ -106,13 +106,14 @@
                 </div>
 
                 <div class="buttonContainer">
-                    <div onclick="clearAllInput()" class="button" id="clear">
-                        clear
-                        <img src="./assets/clear.svg" alt="">
+                    <div style="display: flex;" onclick="clearAllInput()" class="button only-desktop" id="clear">
+                        <p style="font-weight: 400; font-size: 21px; margin: 0px;" id="cancelText">Cancel</p>
+                        <img style="width: 11px;" src="./assets/clear.svg" alt="">
                     </div>
-                    <div class="button" id="createTask">
-                        create task
-                        <img src="./assets/createTask.svg">
+                    <div style="display: flex;" class="button" id="createTask">
+                        <p class="only-desktop" style="font-weight: 700; font-size: 21px; margin: 0px;" id="createTaskText">Create Task</p>
+                        <p class="only-mobile" style="font-weight: 700; font-size: 21px; margin: 0px;" id="createText">Create</p>
+                        <img style="width: 16px;" src="./assets/createTask.svg">
                     </div>
                 </div>
             </div>

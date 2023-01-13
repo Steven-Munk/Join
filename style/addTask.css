@@ -23,7 +23,6 @@ input, select, button, .input {
     cursor: pointer;
 }
 
-
 .p-0 {
     padding: 0;
 }
@@ -84,6 +83,7 @@ label {
 .forms {
     display: flex;
     justify-content: center;
+    margin-top: 0px;
 }
 
 .form {
@@ -316,7 +316,7 @@ label {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    color: white;
 }
 
 ul {
@@ -401,6 +401,14 @@ ul {
     display: none;
 }
 
+.only-desktop {
+    display: flex !important;
+}
+
+.only-mobile {
+    display: none !important;
+}
+
 @keyframes comeFromBottom {
     0% {
         bottom: -150px;
@@ -429,6 +437,14 @@ ul {
 
 @media (max-width: 1080px) {
 
+    .only-desktop {
+        display: none !important;
+    }
+
+    .only-mobile {
+        display: block !important;
+    }
+
     body {
         justify-content: center;
     }
@@ -436,6 +452,8 @@ ul {
     .forms {
         flex-direction: column;
         justify-content: unset;
+        margin-top: 170px;
+        margin-bottom: 100px;
     }
 
     .form:first-child {

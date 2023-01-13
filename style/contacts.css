@@ -378,7 +378,8 @@ h1 {
 }
 
 .pop-up-input:focus {
-    outline: none;
+    outline: none !important;
+    border: none !important;
 }
 
 .pop-up-input::placeholder {
