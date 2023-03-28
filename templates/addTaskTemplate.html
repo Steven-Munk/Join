@@ -1,0 +1,125 @@
+<div id="fullscreen">
+    <div class="templateContainer">
+
+        <!-- unterhalb alles von steven für responsive hinzugefügt -->
+
+        <div class="mobile-btn-container">
+            <div>
+                <img src="./assets/mobile-logo.svg">
+            </div>
+        </div>
+
+        <!-- oberhalb alles von steven für responsive hinzugefügt -->
+
+        <img onclick="closeAddTaskTemplate()" id="close" src="./assets/close.svg" alt="">
+
+        <h1 id="headline">Add Task</h1>
+        <div id="forms" class="forms templates">
+            <div class="form">
+
+                <div class="inputContainer">
+                    <label for="title">Title</label>
+                    <input type="text" placeholder="Enter a title" id="title">
+                    <div id="titleValidation" class="formValidation">
+                        <span>This field is required</span>
+                    </div>
+                </div>
+                <div class="inputContainer">
+                    <label for="description">Description</label>
+                    <textarea id="description" placeholder="Enter a Description" cols="30" rows="5"></textarea>
+                    <div id="descriptionValidation" class="formValidation">
+                        <span>This field is required</span>
+                    </div>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="customSelect">Category</label>
+                    <div id="categorySelector" class="customSelect">
+                        <!-- Content will be rendered by js -->
+                    </div>
+                    <div id="categoryValidation" class="formValidation">
+                        <span>This field is required</span>
+                    </div>
+                    <div id="colorPicker" class="colorPicker">
+                        <div onclick="colorPicker('yellow')" id="yellow" class="color yellow"></div>
+                        <div onclick="colorPicker('red')" id="red" class="color red"></div>
+                        <div onclick="colorPicker('green')" id="green" class="color green"></div>
+                        <div onclick="colorPicker('blue')" id="blue" class="color blue"></div>
+                        <div onclick="colorPicker('pink')" id="pink" class="color pink"></div>
+                        <div onclick="colorPicker('orange')" id="orange" class="color orange"></div>
+                        <div onclick="colorPicker('ocean')" id="ocean" class="color ocean"></div>
+                    </div>
+
+                </div>
+
+                <div class="inputContainer">
+                    <label for="customSelect">Assigned</label>
+                    <div id="assignedSelector" class="customSelect">
+                        <!-- Content will be rendered by js-->
+                    </div>
+                    <div id="assignedToValidation" class="formValidation">
+                        <span>This field is required</span>
+                    </div>
+                    <div id="assignedToContainer">
+                        <!-- Content will be rendered by js-->
+                    </div>
+                </div>
+            </div>
+            <div class="form">
+                <div class="inputContainer">
+                    <label for="dueDate">Due Date</label>
+                    <input type="date" placeholder="" id="dueDate">
+                    <div id="dueDateValidation" class="formValidation">
+                        <span>This field is required</span>
+                    </div>
+                </div>
+                <div class="inputContainer">
+                    <label>Prio</label>
+                    <div class="row">
+                        <button id="urgent" class="prioButton" onclick="activatePrioButton('urgent')">
+                            Urgent
+                            <img src="./assets/urgent.svg" alt="">
+                        </button>
+                        <button id="medium" class="prioButton" onclick="activatePrioButton('medium')">
+                            Medium
+                            <img src="./assets/medium.svg" alt="">
+                        </button>
+                        <button id="low" class="prioButton" onclick="activatePrioButton('low')">
+                            Low
+                            <img src="./assets/low.svg" alt="">
+                        </button>
+                    </div>
+                    <div id="prioStateValidation" class="formValidation">
+                        <span>This field is required</span>
+                    </div>
+                </div>
+                <div class="inputContainer">
+                    <label for="subtask">Subtasks</label>
+                    <div id="subtask">
+                        <div class="input" onclick="renderSubtaskInput()">
+                            Add new subtask
+                        </div>
+                    </div>
+                    <ul id="subtaskList">
+                        <!-- Content will be rendered by js-->
+                    </ul>
+                </div>
+
+                <div class="buttonContainer">
+                    <div onclick="closeAddTaskTemplate()" class="button" id="clear">
+                        <p id="cancelText"></p>
+                        <img id="cancelImage" src="./assets/clear.svg" alt="">
+                    </div>
+                    <div class="button" id="createTask">
+                        <p id="createText"></p>
+                        <img id="createImage" src="./assets/createTask.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="addedToBoard">
+            <span>Task added to board</span>
+            <img src="./assets/board.svg" alt="">
+        </div>
+    </div>
+</div>

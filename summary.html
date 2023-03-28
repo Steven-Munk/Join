@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="./script/mini_backend.js"></script>
+    <script src="./script/summary.js"></script>
+    <script src="./script/templates.js"></script>
+    <script src="./script/main.js"></script>
+
+    <link rel="stylesheet" href="./style/sideBar.css">
+    <link rel="stylesheet" href="./style/summary.css">
+    <link rel="stylesheet" href="./style/summaryMobile.css">
+    <link rel="stylesheet" href="./style/fonts.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>summary</title>
+</head>
+
+<!--resetAutoLogIn()-->
+
+<body id="body" onload="initSummary()">
+
+    <div w3-include-html="./templates/sideBar.html"></div>
+
+    <div id="mobile-greeting">
+        <h2 id="mobileGreeting-title"></h2>
+        <p id="name-mobile" class="name"></p>
+    </div>
+
+
+
+    <div id="container" class="container">
+
+        <div class="title">
+            <p class="kanban only-mobile">Kanban Project Management Tool</p>
+            <h1>Summary</h1>
+            <img class="only-desktop" src="assets/blue-line-vertical.svg">
+            <p class="title-p">Everything in a nutshell!</p>
+            <img class="only-mobile" src="assets/blue-line-horizontal.svg">
+        </div>
+
+        <div class="content">
+
+            <div class="overview">
+
+                <div class="top-row">
+
+                    <div onclick="goToBorad()" class="overview-card top-row-card">
+                        <div id="inBoard" class="card-number">
+                            0
+                        </div>
+                        <p class="card-text">
+                            Tasks in<br>Board
+                        </p>
+                    </div>
+
+                    <div onclick="goToBorad()" class="overview-card top-row-card">
+                        <div id="inProgress" class="card-number">
+                            0
+                        </div>
+                        <p class="card-text">
+                            Tasks in<br>Progress
+                        </p>
+                    </div>
+
+                    <div onclick="goToBorad()" class="overview-card top-row-card">
+                        <div id="awaitingFeedback" class="card-number">
+                            0
+                        </div>
+                        <p class="card-text">
+                            Awaiting<br>Feedback
+                        </p>
+                    </div>
+
+                </div>
+
+                <div onclick="goToBorad()" class="overview-card mid-row-card">
+
+
+                    <div id="prio-img-container" class="prio-img-container">
+                        <img id="prio-img" class="prio-img" src="./assets/icons8-no-deadline.png">
+                    </div>
+
+                    <div class="mid-card-urgent">
+
+                        <div id="prio-amount" class="mid-card-number">
+                            0
+                        </div>
+                        <p id="prio" class="mid-card-text">
+                            Urgent
+                        </p>
+
+                    </div>
+
+                    <img class="gray-line" src="./assets/gray-line-vertical.svg">
+
+                    <div class="deadline">
+
+                        <p id="deadline" class="date"></p>
+                        <p id="deadlineText" class="mid-card-text">No Upcoming Deadline</p>
+
+                    </div>
+
+                </div>
+
+                <div class="bottom-row">
+
+                    <div onclick="goToBorad()" class="overview-card bottom-row-card">
+
+                        <img class="img-scale" src="./assets/pencil-filled.svg">
+                        <div style="text-align: center;">
+
+                            <div id="toDo" class="card-number">
+                                0
+                            </div>
+                            <p class="card-text">
+                                To-do
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div onclick="goToBorad()" class="overview-card bottom-row-card">
+
+                        <img class="img-scale" src="./assets/checked-filled.svg">
+
+                        <div style="text-align: center;">
+
+                            <div id="done" class="card-number">
+                                0
+                            </div>
+                            <p class="card-text">
+                                Done
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="greeting" class="greeting">
+
+                <h2 id="greeting-title"></h2>
+                <p id="name-desktop" class="name"></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

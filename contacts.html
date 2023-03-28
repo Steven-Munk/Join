@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="stylesheet" href="./style/addTask.css">
+    <link rel="stylesheet" href="./style/sideBar.css">
+    <link rel="stylesheet" href="./style/contacts.css">
+    <link rel="stylesheet" href="./style/contactMobile.css">
+    <link rel="stylesheet" href="./style/fonts.css">
+    <link rel="stylesheet" href="./style/background-colors.css">
+
+
+
+    <script src="./script/mini_backend.js"></script>
+    <script src="./script/main.js"></script>
+    <script src="./script/addTask.js"></script>
+    <script src="./script/contacts.js"></script>
+    <script src="./script/templates.js"></script>
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
+    <title>Contacts</title>
+</head>
+
+<body onload="initContacts()">
+
+    <div id="addTaskTemplate" w3-include-html="./templates/addTaskTemplate.html"></div>
+
+    <div w3-include-html="./templates/sideBar.html"></div>
+
+
+    <div class="contact-page">
+
+        <div id="list" class="list">
+        </div>
+
+
+        <button onclick="newContactWindow()" id="add-btn" class="add-btn">
+            <p style="font-size: 20px;">New contact</p>
+            <img src="./assets/add-contact.svg">
+        </button>
+
+
+        <div id="contactEntrie" class="contact-entrie mobile-entrie">
+
+            <span class="only-mobile" style="margin-top: 35px;">Kanban Project Management Tool</span>
+
+            <div class="title">
+                <h1>Contacts</h1>
+                <img class="only-desktop" src="assets/blue-line-vertical.svg">
+                <p>Better with a team</p>
+                <img style="margin-top: 12px;" class="only-mobile" src="./assets/blue_line_horizontal.svg">
+            </div>
+
+            <div id="selected-contact" class="contact-info">
+            </div>
+
+        </div>
+
+
+        <addContact id="pop-up-container" onclick="closeNewContact()" class="pop-up-container d-none">
+
+            <div id="pop-up-window" onclick="dontClosePopup(event)" class="pop-up-window hidden">
+
+                <img onclick="closeNewContact()" class="mobile-pop-up-cross only-mobile"
+                    src="./assets/mobile-add-task-cross.svg">
+
+                <div class="pop-up-left">
+                    <div class="left-content">
+                        <img class="only-desktop" src="./assets/add-contact-logo.svg">
+                        <h2 class="pop-up-title">Add contact</h2>
+                        <p class="pop-up-subtask">Tasks are better with a team!</p>
+                        <img src="./assets/add-contact-blue-line.svg">
+                    </div>
+                </div>
+
+                <div class="pop-up-right">
+
+                    <img onclick="closeNewContact()" class="pop-up-exit only-desktop" src="./assets/pop-up-cross.svg">
+
+                    <img class="pop-up-profile-pic" src="./assets/add-contact-img.svg">
+
+                    <form onsubmit="createNewContact(); return false;" class="all-inputfields">
+
+                        <div class="pop-up-inputfield">
+                            <input id="newName" class="pop-up-input" type="text" placeholder="Name"
+                                title="Please ensert a name" required>
+                            <img src="./assets/profile-input.svg">
+                        </div>
+
+                        <div class="pop-up-inputfield">
+                            <input id="newEmail" class="pop-up-input" type="email" placeholder="Email"
+                                title="Please ensert an email" required>
+                            <img src="./assets/mail.svg">
+                        </div>
+
+                        <div class="pop-up-inputfield">
+                            <input id="newPhone" class="pop-up-input" type="tel" placeholder="Phone"
+                                title="Please ensert a phone number" required>
+                            <img src="./assets/phone.svg">
+                        </div>
+
+                        <div class="pop-up-btn">
+
+                            <button onclick="closeNewContact()" class="bright-btn only-desktop">
+                                Cancel
+                                <p class="x">+</p>
+                            </button>
+
+                            <button class="dark-btn">
+                                Create contact
+                                <img src="./assets/little-check.svg">
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </addContact>
+
+
+        <editContact id="pop-up-edit" onclick="closeEdit()" class="pop-up-container d-none">
+
+            <div id="pop-up-edit-window" onclick="dontClosePopup(event)" class="pop-up-window hidden">
+
+                <img onclick="closeEdit()" class="mobile-pop-up-cross only-mobile"
+                    src="./assets/mobile-add-task-cross.svg">
+
+                <div class="pop-up-left">
+                    <div class="left-content">
+                        <img class="only-desktop" src="./assets/add-contact-logo.svg">
+                        <h2 class="pop-up-title">Edit contact</h2>
+                        <img src="./assets/add-contact-blue-line.svg">
+                    </div>
+                </div>
+
+                <div id="edit-content" class="pop-up-right">
+                </div>
+            </div>
+        </editContact>
+
+    </div>
+
+
+</body>
+
+</html>

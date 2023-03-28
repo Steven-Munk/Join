@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="./script/mini_backend.js"></script>
+    <script src="./script/login.js"></script>
+
+    <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" href="./style/loginMobile.css">
+    <link rel="stylesheet" href="./style/fonts.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Reset Password</title>
+</head>
+
+<body onload="init()">
+
+
+    <!--dektop logo-->
+    <a href="index.html"><img id="logo-dektop" class="logo-after only-dekstop" src="./assets/join-logo.svg"
+            alt="join-logo"></a>
+
+
+    <!--mobile logo-->
+    <a href="index.html"><img class="mobile-logo-after only-mobile" src="./assets/join-logo.svg" alt="join-logo"></a>
+
+
+    <div class="card reset-card">
+
+        <!--desktop back arrow-->
+        <a class="blue-arrow only-dekstop" href="forgot_password.html">
+            <img src="./assets/arrow-left-blue.svg">
+        </a>
+
+        <!--mobile back arrow-->
+        <a class="dark-arrow only-mobile" href="forgot_password.html">
+            <img src="./assets/mobile-back-arrow.svg">
+        </a>
+
+        <h1 style="height: auto;">Reset your password</h1>
+        <div class="underline"></div>
+
+        <p class="text only-dekstop">Change your account password</p>
+        <p class="text only-mobile">Change your account password here.</p>
+
+        <form onsubmit="createNewPassword(); return false;" class="card-content">
+
+            <div class="all-inputfields">
+
+                <div class="inputfield">
+                    <input id="firstPassword" class="input" minlength="8" type="password" placeholder="New Password"
+                        title="Set a new password" required>
+                    <span id="wrong-email" class="wrong-input opacity-zero">Password doesnt match!</span>
+                </div>
+
+                <div class="inputfield">
+                    <input id="secondPassword" class="input" minlength="8" type="password"
+                        placeholder="Confirm Password" title="Repeat the new password" required>
+                    <span id="wrong-password" class="wrong-input opacity-zero">Password doesnt match!</span>
+                </div>
+
+            </div>
+
+            <input class="dark-btn mail-continue-btn" type="submit" value="Continue">
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+/****************************OUTSIDE OF CARD*************************/
+
+.only-dekstop {
+    display: flex;
+}
+
+.only-mobile {
+    display: none;
+}
+
+
+@media (max-width: 1400px) {
+
+    .logo-after {
+        top: 50px;
+        left: 50px;
+    }
+
+    .sign-up-container {
+        top: 55px;
+        right: 65px;
+    }
+
+}
+
+
+@media (max-width: 1200px) {
+
+    .logo-after {
+        top: 30px;
+        left: 35px;
+    }
+
+    .sign-up-container {
+        top: 30px;
+        right: 45px;
+    }
+
+}
+
+
+@media (max-width: 1200px) {
+
+    .logo-after {
+        top: 25px;
+        left: 30px;
+        transform: scale(0.8);
+    }
+
+    .sign-up-container {
+        top: 25px;
+        right: 35px;
+    }
+
+}
+
+/** Version for Cellphones*/
+@media (max-width: 1080px) {
+
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 100px;
+    }
+
+    .only-dekstop {
+        display: none;
+    }
+
+    .only-mobile {
+        display: block;
+    }
+
+    .mobile-logo-before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1.5);
+        transition: 500ms ease-in-out;
+    }
+
+    .mobile-logo-after {
+        position: absolute;
+        top: 37px;
+        left: 38px;
+        transform: scale(0.8);
+    }
+
+    .mobile-sign-up {
+        display: flex;
+        align-items: center;
+
+        top: 50%;
+        left: 50%;
+        transition: 500ms ease-in-out;
+    }
+
+    .dark-arrow {
+        position: absolute;
+        top: 32px;
+        left: 27px;
+        cursor: pointer;
+    }
+
+    .desktop-sign-up {
+        display: none;
+    }
+
+    .card {
+        width: 372px;
+        height: 573px;
+        margin-bottom: 49px;
+    }
+
+    .dark-btn {
+        font-size: 16px;
+        width: 180px;
+        height: 51px;
+    }
+
+    .bright-btn {
+        font-size: 16px;
+        width: 180px;
+        height: 51px;
+    }
+
+    /****************************OUTSIDE OF CARD*************************/
+
+    /****************************INSIDE OF CARD*************************/
+
+    h1 {
+        font-size: 47px;
+        height: 41px;
+    }
+
+    .underline {
+        width: 80px;
+    }
+
+    .inputfield {
+        width: 327px;
+        height: 41px;
+    }
+
+    .input {
+        width: 80%;
+        height: 25px;
+    }
+
+    .wrong-input {
+        top: 50px;
+    }
+
+    .memorie-container {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 30px;
+        width: 327px;
+    }
+
+    .login-button-container {
+        flex-direction: column;
+        gap: 21px;
+    }
+
+    /****************************INSIDE OF CARD*************************/
+
+    /****************************SIGN UP SECTION*************************/
+
+    .sign-up-card {
+        height: 501px;
+    }
+
+    /****************************SIGN UP SECTION*************************/
+
+    /****************************FORGOT SECTION*************************/
+
+    .forgot-card {
+        height: 502px;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .text {
+        width: 322px;
+    }
+
+    /****************************FORGOT SECTION*************************/
+
+    /****************************RESET SECTION*************************/
+
+    .reset-card {
+        text-align: center;
+        gap: 20px;
+        height: 525px;
+    }
+
+    /****************************RESET SECTION*************************/
+
+    /****************************ANIMATION SECTION*************************/
+
+    .screen-cover {
+        z-index: 999;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-color: #2A3647;
+        transition: 500ms ease-in-out;
+    }
+
+    /****************************ANIMATION SECTION*************************/
+}
+
+@media (max-width: 700px) {
+    .mobile-logo-after {
+
+        top: -15px;
+        left: 0px;
+        transform: scale(0.5);
+    }
+
+}

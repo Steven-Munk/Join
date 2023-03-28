@@ -1,0 +1,253 @@
+.only-desktop {
+    display: flex !important;
+}
+
+.only-mobile {
+    display: none !important;
+}
+
+
+
+@media (max-width: 1080px) {
+
+    .only-desktop {
+        display: none !important;
+    }
+
+    .only-mobile {
+        display: block !important;
+    }
+
+    body {
+        margin-top: 80px;
+        margin-left: 0px;
+        background-color: white;
+    }
+
+    .contact-page {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    .list {
+        width: 100%;
+        height: calc(100vh - 250px);
+        margin-top: 80px;
+    }
+
+    .letter-entrie {
+        align-items: center;
+    }
+
+    .letter-container {
+        display: flex;
+        justify-content: space-between;
+        width: 325px;
+    }
+
+    .letter {
+        padding-left: 24px;
+    }
+
+    .horizontal-line {
+        width: 326px;
+    }
+
+    .single-contact {
+        padding: 0px;
+        width: 307px;
+    }
+
+    .single-contact:hover {
+        background-image: none;
+    }
+
+    .single-contact:active {
+        color: #2A3647;
+        background-color: white;
+    }
+
+    .edit-div {
+        height: auto;
+    }
+
+    .mail {
+        align-items: flex-start;
+        width: auto;
+    }
+    
+    .mobile-back-arrow {
+        position: absolute;
+        top: 166px;
+        right: 34px;
+        cursor: pointer;
+    }
+
+    .mobile-edit-btn {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 22px;
+        bottom: 120px;
+        cursor: pointer;
+    }
+
+    .contact-entrie {
+        margin: 0px;
+        width: 90%;
+        height: calc(100vh - 160px);
+        overflow: scroll;
+    }
+
+    .mobile-entrie {
+        display: none;
+    }
+
+    .title {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 19px;
+        margin-bottom: 35px;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 47px;
+    }
+
+    .huge-contact {
+        gap: 20px;
+    }
+
+    .huge-initials {
+        width: 80px;
+        height: 80px;
+        font-size: 27px;
+    }
+
+    .huge-name {
+        font-size: 36px;
+    }
+
+    .huge-name-add-task {
+        width: 70%;
+    }
+
+    .add-task {
+        gap: 5px;
+    }
+
+    .add-btn {
+        top: 97px;
+        right: 10px;
+        left: auto;
+        bottom: auto;
+    }
+
+    .pop-up-container {
+        z-index: 9990;
+    }
+
+    .hidden {
+        left: auto;
+        top: 100vh;
+    }
+
+    .pop-up-window {
+        z-index: 9999;
+        width: 90%;
+        height: 90%;
+        flex-direction: column;
+        position: relative;
+        overflow: scroll;
+    }
+
+    .mobile-pop-up-cross {
+        position: absolute;
+        top: 26px;
+        right: 16px;
+        z-index: 9999;
+    }
+
+    .pop-up-left {
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 30px;
+        width: 100%;
+        height: 351px;
+    }
+
+    .left-content {
+        min-height: 270px;
+        margin-inline: 10px;
+    }
+
+    .pop-up-title {
+        font-size: 47px;
+    }
+
+    .pop-up-subtitle {
+        font-size: 21px;
+    }
+
+    .pop-up-right {
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 30px;
+        flex-direction: column;
+        gap: 0px;
+        width: 100%;
+        height: 410px;
+    }
+
+    .pop-up-profile-pic {
+        margin-bottom: 13px;
+        position: relative;
+        bottom: 50px;
+    }
+
+    .pop-up-initials {
+        width: 120px;
+        height: 120px;
+        position: relative;
+        bottom: 50px;
+    }
+
+    .all-inputfields {
+        gap: 35px;
+        position: relative;
+        bottom: 70px;
+    }
+
+    .pop-up-inputfield {
+        width: 85%;
+        height: 41px;
+    }
+
+    .pop-up-input {
+        width: 70%;
+        padding-block: 0px;
+    }
+
+    .dark-btn {
+        width: 212px;
+        height: 51px;
+    }
+
+    .contact-info {
+        padding-bottom: 15px;
+    }
+
+    .forms {
+      margin-bottom: 0px !important;
+    }
+
+    nav {
+        z-index: 0 !important;
+    }
+
+    #close {
+        display: block !important;
+    }
+}

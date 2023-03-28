@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="./script/mini_backend.js"></script>
+    <script src="./script/login.js"></script>
+    <script src="./script/templates.js"></script>
+    <script src="./script/main.js"></script>
+
+    <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" href="./style/loginMobile.css">
+    <link rel="stylesheet" href="./style/fonts.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Login</title>
+</head>
+
+<body onload="initLogin(), initIndexHTML()">
+
+
+    <!--dektop logo-->
+    <a href="index.html"><img id="logo-dektop" class="logo-before only-dekstop" src="./assets/join-logo.svg"
+            alt="join-logo"></a>
+
+
+    <!--mobile logo-->
+    <a href="index.html"><img id="logo-mobile" class="mobile-logo-before only-mobile" src="./assets/join-logo.svg"
+            alt="join-logo"></a>
+
+
+    <!--screen cover for login effect-->
+    <div id="screen-cover" class="screen-cover only-mobile">
+        <img id="logo-mobile-cover" class="mobile-logo-before" src="./assets/mobile-animation-logo.svg">
+    </div>
+
+
+    <!--desktop sign in-->
+    <div id="sign-up-desktop" class="sign-up-container only-dekstop opacity-zero">
+        <p style="font-size: 21px;">Not a Join user?</p>
+        <a href="sign_up.html"><button class="dark-btn sign-btn">Sign up</button></a>
+    </div>
+
+
+    <div id="card" class="card opacity-zero">
+
+        <h1>Log in</h1>
+        <div class="underline"></div>
+
+        <form onsubmit="logIn(); return false;" class="card-content">
+
+            <div class="all-inputfields">
+
+                <div id="email-container" class="inputfield">
+                    <input class="input" id="email" type="email" placeholder="Email"
+                        title="Please ensert a valid email adress!" required>
+                    <img src="./assets/mail.svg" alt="mail-icon" title="Please ensert a valid email adress!">
+                    <span id="wrong-email" class="wrong-input opacity-zero"></span>
+
+                </div>
+
+                <div id="password-container" class="inputfield">
+                    <input oninput="changePasswordIcon()" class="input" id="password" minlength="8" type="password"
+                        placeholder="Password" title="Please ensert your password" required>
+                    <img onclick="makePasswordVisible()" style="cursor: pointer;" id="password-icon"
+                        src="./assets/lock.svg" alt="lock-icon" title="Please ensert your password">
+                    <span id="wrong-password" class="wrong-input opacity-zero">Wrong Email or Password</span>
+                </div>
+
+            </div>
+
+            <div class="memorie-container">
+                <div class="remember-container">
+                    <input id="remember-me" class="remember-checkbox" type="checkbox">
+                    <label style="margin: 0px;">Remember me</label>
+                </div>
+                <a class="forgot-password" href="forgot_password.html">Forgot my password</a>
+            </div>
+
+            <div class="login-button-container">
+                <input class="dark-btn" type="submit" value="Log in">
+                <div onclick="guestLogin()" class="bright-btn">Guest Log in</div>
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <!--mobile-sign-up-->
+    <div id="sign-up-mobile" class="mobile-sign-up only-mobile opacity-zero">
+        <p class="sign-up-container-text">Not a Join user?</p>
+        <a href="sign_up.html"><button class="dark-btn sign-btn">Sign up</button></a>
+    </div>
+
+
+</body>
+
+</html>
